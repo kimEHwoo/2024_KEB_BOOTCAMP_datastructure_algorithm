@@ -1,8 +1,3 @@
-# def factorial(number) -> int:
-#     '''
-#     factorial by repetition
-#     :param number: number (int)
-#     :return: factorial result (int)
 import mymath
 import time
 
