@@ -1,18 +1,32 @@
-import random
+class Node():
+    def __init__(self):
+        self.data = None
+        self.link = None
 
-answer = random.randint(1,100)
-chance = 7
+node1 = Node()
+node1.data = '다현'
 
-while chance !=0:
-    guess = int(input("Input guess number: "))
-    if guess == answer:
-        print(f'You win. Answer is {answer}')
-        break
-    elif guess > answer:
-        chance = chance - 1
-        print(f'{guess} is bigger than answer')
-    else:
-        chance = chance - 1
-        print(f'{guess} is smaller than answer')
-else:
-    print(f'You lost. answer is {answer}')
+node2 = Node()
+node2.data = '정연'
+node1.link = node2
+
+node3 = Node()
+node3.data = '쯔위'
+node2.link = node3
+
+node4 = Node()
+node4.data = '사나'
+node3.link = node4
+
+node5 = Node()
+node5.data = '지효'
+node4.link = node5
+
+node2.link = node3.link
+del(node3)
+
+current = node1
+print(current.data, end = ' ')
+while current.link != None:
+    current = current.link
+    print(current.data, end = ' ')
