@@ -1,22 +1,14 @@
-def factorial(number) -> int :
-    result = 1
-    for i in range(1, number + 1):
-        result = result * i
-    return result
+# def factorial(number) -> int:
+#     '''
+#     factorial by repetition
+#     :param number: number (int)
+#     :return: factorial result (int)
+import mymath
+import time
 
-
-def nCr(n, r) -> int :
-    '''
-    조합 함수
-    :param n:
-    :param r:
-    :return:
-    '''
-    numerator = factorial(n)
-    denominator = factorial(n-r) * factorial(r)
-    return int(numerator / denominator)
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     n = int(input("Input n : "))
     r = int(input("Input r : "))
-    print(f"{n}C{r} = {nCr(n, r)}")
+    print(f"{n}C{r} = {mymath.nCr(n, r)}")
+    # f = int(input())
+    # print(mymath.factorial(f))
